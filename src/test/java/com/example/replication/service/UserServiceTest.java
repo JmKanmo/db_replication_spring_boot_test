@@ -19,15 +19,20 @@ class UserServiceTest {
 
     @Test
     void userFindTest() {
-        for (int i = 11; i <= 20; i++) {
+        for (int i = 1000; i <= 1100; i++) {
             System.out.println(userService.findUserById(i));
         }
     }
 
     @Test
     void customUserFindTest() {
-        for (int i = 11; i <= 20; i++) {
+        for (int i = 1000; i <= 1100; i++) {
             System.out.println(customUserService.findUserById((long) i));
         }
+    }
+
+    @Test
+    void batchTest() {
+        userService.insertBatchUsers();
     }
 }

@@ -10,15 +10,12 @@ import javax.persistence.*;
 @Entity
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
     private String name;
-
-    public User(String name) {
-        this.name = name;
-    }
 }
